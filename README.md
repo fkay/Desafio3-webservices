@@ -3,10 +3,10 @@ Desafio 3 curso mobile android - digital house
 
 Espera-se que o aluno consiga executar as seguintes atividades seguindo o seguinte layout: https://marvelapp.com/prototype/194b601g/screen/53575548/handoff
 
-Dados da API
-https://developer.marvel.com/docs
-public key = "XXXXXXXXXXXX"
-private key = "YYYYYYYYYYYYYYYYYY"
+Dados da API  
+https://developer.marvel.com/docs  
+public key = "XXXXXXXXXXXX"  
+private key = "YYYYYYYYYYYYYYYYYY"   
 
 Padrão de Design
 * Seguir os padrões do Material Design
