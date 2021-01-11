@@ -14,4 +14,11 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/fill</item>
     </style>
+
+    <style name="TextInputCustom" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:textColor">@color/editText</item>
+        <item name="boxStrokeColor">#C0CCDA</item>
+        <item name="android:textColorHint">@color/primary</item>
+    </style>
 </resources>
