@@ -14,4 +14,5 @@
     <color name="editText">#1F2D3D</color>
     <color name="grayText">#47525E</color>
     <color name="lightGrayText">#343F4B</color>
+    <color name="editLine">#C0CCDA</color>
 </resources>

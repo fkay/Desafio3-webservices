@@ -18,7 +18,17 @@
     <style name="TextInputCustom" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="boxBackgroundColor">@color/white</item>
         <item name="android:textColor">@color/editText</item>
-        <item name="boxStrokeColor">#C0CCDA</item>
+        <item name="boxStrokeColor">@color/editLine</item>
         <item name="android:textColorHint">@color/primary</item>
+    </style>
+
+    <style name="CheckBoxInputCustom" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CheckBox</item>
+        <item name="android:textColor">@color/grayText</item>
+    </style>
+
+    <style name="ThemeOverlay.App.CheckBox" parent="">
+        <item name="colorOnSurface">@color/grayText</item>
+        <item name="colorSecondary">@color/primary</item>
     </style>
 </resources>

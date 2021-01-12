@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegistrarTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/registrar"
+        android:textSize="27sp"
+        android:background="@color/primary"
+        android:textColor="@color/onPrimary"
+        android:paddingVertical="24dp"
+        android:paddingLeft="80dp"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnRegistrarVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvRegistrarTitulo"
+        app:layout_constraintBottom_toBottomOf="@id/tvRegistrarTitulo"
+        app:layout_constraintStart_toStartOf="@id/tvRegistrarTitulo"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_36"
+        android:background="@drawable/state_pressed_ripple"
+        android:layout_marginStart="24dp"
+        />
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llayRegistrarCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvRegistrarTitulo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shape_card"
+        android:layout_marginHorizontal="24dp"
+        android:orientation="vertical">
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_card_inside"
+            android:orientation="vertical"
+            android:layout_marginTop="64dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfRegistrarNome"
+                android:layout_width="match_parent"
+                style="@style/TextInputCustom"
+                android:layout_height="wrap_content"
+                android:hint="@string/nome"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="36dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edRegistrarNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="2dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfRegistrarEmail"
+                android:layout_width="match_parent"
+                style="@style/TextInputCustom"
+                android:layout_height="wrap_content"
+                android:hint="@string/emaill"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edRegistrarEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="2dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfRegistrarSenha"
+                android:layout_width="match_parent"
+                style="@style/TextInputCustom"
+                android:layout_height="wrap_content"
+                android:hint="@string/senha"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edRegistrarSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="2dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLoginLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/salvar"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="16dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_register"
+        app:srcCompat="@drawable/register"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="@id/llayRegistrarCard"
+        app:layout_constraintEnd_toEndOf="@id/llayRegistrarCard"
+        app:layout_constraintBottom_toTopOf="@id/llayRegistrarCard"
+        app:layout_constraintTop_toTopOf="@id/llayRegistrarCard"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

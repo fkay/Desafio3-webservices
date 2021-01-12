@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Desafio3</string>
     <string name="spiderman_marvel">Spiderman Marvel®</string>
+    <string name="emaill">Emaill</string>
+    <string name="welcome_to_marvel">Welcome to Marvel HQ\'s</string>
+    <string name="senha">Password</string>
+    <string name="lembrar">Remember</string>
+    <string name="log_in">Log in</string>
+    <string name="criar_conta">Create account</string>
+    <string name="registrar">Register</string>
+    <string name="nome">Name</string>
+    <string name="salvar">Save</string>
 </resources>
