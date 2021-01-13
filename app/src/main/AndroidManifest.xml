@@ -12,9 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Desafio3">
-        <activity android:name=".RegistrarActivity"/>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".view.activity.HomeActivity"></activity>
+        <activity
+            android:name=".view.activity.HomeActivity"
+            android:label="@string/title_activity_lista_revistas"
+            android:theme="@style/Theme.Desafio3.NoActionBar" />
+        <activity android:name=".view.activity.RegistrarActivity" />
+        <activity android:name=".view.activity.LoginActivity" />
+        <activity android:name=".view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -31,4 +31,13 @@
         <item name="colorOnSurface">@color/grayText</item>
         <item name="colorSecondary">@color/primary</item>
     </style>
+
+    <style name="Theme.Desafio3.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Desafio3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Desafio3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

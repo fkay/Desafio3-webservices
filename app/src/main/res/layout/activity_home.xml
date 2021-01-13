@@ -4,15 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.SplashActivity"
-    android:id="@+id/splashScreen">
+    tools:context=".view.activity.HomeActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/splashImage"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaRevistasCapas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/splash"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/spiderman_marvel" />
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
