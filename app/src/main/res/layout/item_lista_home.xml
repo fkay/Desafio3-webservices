@@ -4,7 +4,9 @@
     android:layout_width="96dp"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
