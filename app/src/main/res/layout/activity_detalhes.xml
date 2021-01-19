@@ -23,10 +23,13 @@
       app:layout_constraintTop_toTopOf="@id/ivDetalhesPortrait"
       app:layout_constraintStart_toStartOf="@id/ivDetalhesPortrait"
       app:srcCompat="@drawable/ic_baseline_arrow_back_36"
+      android:background="?android:selectableItemBackground"
       android:layout_marginStart="24dp"
+      android:layout_marginTop="16dp"
       />
 
   <LinearLayout
+      android:id="@+id/llDetalhesCapa"
       android:layout_width="96dp"
       android:layout_height="148dp"
       app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +40,7 @@
       >
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivCapaDetalhes"
+        android:id="@+id/ivDetalhesCapa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:src="@drawable/capa"
@@ -46,4 +49,100 @@
 
   </LinearLayout>
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <TextView
+      android:id="@+id/tvDetalhesTitulo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/llDetalhesCapa"
+      tools:text="AMAZING SPIDER-MAN (2014) #1 (MHAN VARIANT)"
+      android:textColor="@color/onPrimary"
+      android:textSize="24sp"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="24dp"/>
+
+  <TextView
+      android:id="@+id/tvDetalhesDescricao"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@id/tvDetalhesTitulo"
+      app:layout_constraintEnd_toEndOf="@id/tvDetalhesTitulo"
+      app:layout_constraintTop_toBottomOf="@id/tvDetalhesTitulo"
+      tools:text="The Greatest Super Hero of All Time RETURNS! The world may have changed since Spidey's been gone, but so has Peter Parker. This is a man with a second chance at life, and he's not wasting a moment of it. Same Parker Luck, new Parker attitude. Putting the 'friendly' back in the neighborhood, the 'hero' back into 'super hero' and the amazing back into 'Spider-Man!' Also returning: The recharged and reenergized ELECTRO!"
+      android:textColor="@color/onPrimary"
+      android:layout_marginTop="16dp"
+      android:textSize="16sp"
+      />
+
+  <TextView
+      android:id="@+id/tvDetalhesPublicacaoTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@id/tvDetalhesTitulo"
+      app:layout_constraintTop_toBottomOf="@id/tvDetalhesDescricao"
+      android:textColor="@color/onPrimary"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:layout_marginTop="16dp"
+      android:text="@string/published" />
+
+  <TextView
+      android:id="@+id/tvDetalhesPublicacao"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="@id/tvDetalhesPublicacaoTitle"
+      app:layout_constraintTop_toTopOf="@id/tvDetalhesPublicacaoTitle"
+      android:textColor="@color/onPrimary"
+      android:layout_marginStart="8dp"
+      android:textSize="16sp"
+      tools:text="April 30, 2014"/>
+
+  <TextView
+      android:id="@+id/tvDetalhesPrecoTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@id/tvDetalhesTitulo"
+      app:layout_constraintTop_toBottomOf="@id/tvDetalhesPublicacaoTitle"
+      android:textColor="@color/onPrimary"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:layout_marginTop="8dp"
+      android:text="@string/price" />
+
+  <TextView
+      android:id="@+id/tvDetalhesPreco"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="@id/tvDetalhesPrecoTitle"
+      app:layout_constraintTop_toTopOf="@id/tvDetalhesPrecoTitle"
+      android:textColor="@color/onPrimary"
+      android:layout_marginStart="8dp"
+      android:textSize="16sp"
+      tools:text="$ 5,99"/>
+
+  <TextView
+      android:id="@+id/tvDetalhesPaginasTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@id/tvDetalhesTitulo"
+      app:layout_constraintTop_toBottomOf="@id/tvDetalhesPrecoTitle"
+      android:textColor="@color/onPrimary"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:layout_marginTop="8dp"
+      android:text="@string/pages" />
+
+  <TextView
+      android:id="@+id/tvDetalhesPaginas"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="@id/tvDetalhesPaginasTitle"
+      app:layout_constraintTop_toTopOf="@id/tvDetalhesPaginasTitle"
+      android:textColor="@color/onPrimary"
+      android:layout_marginStart="8dp"
+      android:textSize="16sp"
+      tools:text="38"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
