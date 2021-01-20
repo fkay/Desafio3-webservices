@@ -2,10 +2,11 @@ package com.fxii.desafio3.interceptor
 
 import android.content.Context
 import com.fxii.desafio3.R
+import com.fxii.desafio3.services.ServicesConstants
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
-object DefaultMarvelInterceptor(context: Context) {
+object DefaultMarvelInterceptor {
     val defaultInterceptor = getMarvelInterceptorClient()
 
     private fun getMarvelInterceptorClient(): OkHttpClient {
@@ -14,11 +15,12 @@ object DefaultMarvelInterceptor(context: Context) {
             .readTimeout(10, TimeUnit.SECONDS)
             .writeTimeout(10, TimeUnit.SECONDS)
             .addInterceptor { chain ->
-                val ts = System.currentTimeMillis()
+                val ts = System.currentTimeMillis().toString()
                 var url = chain.request().url()
                 url = url.newBuilder()
-                    .addQueryParameter("ts", ts.toString())
-                    .addQueryParameter("apikey", context.getString(R.string.MARVEL_PUBLIC_KEY))
+                    .addQueryParameter("ts", ts)
+                    .addQueryParameter("apikey", ServicesConstants.MARVEL_PUBLIC_KEY)
+                    .addQueryParameter("hash", ServicesConstants.getMarvelHash(ts))
                     .build()
                 chain.proceed(
                     chain.request()
