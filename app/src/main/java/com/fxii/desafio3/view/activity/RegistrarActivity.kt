@@ -1,5 +1,6 @@
 package com.fxii.desafio3.view.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.fxii.desafio3.databinding.ActivityRegistrarBinding
@@ -19,6 +20,11 @@ class RegistrarActivity : AppCompatActivity() {
         with(binding) {
             btnRegistrarVoltar.setOnClickListener{
                 finish()
+            }
+
+            btnRegistrarSalvar.setOnClickListener {
+                val intent = Intent(this@RegistrarActivity, HomeActivity::class.java)
+                startActivity(intent)
             }
         }
     }

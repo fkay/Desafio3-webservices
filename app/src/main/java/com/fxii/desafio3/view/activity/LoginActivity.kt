@@ -19,7 +19,12 @@ class LoginActivity : AppCompatActivity() {
     private fun setupObservables() {
         with(binding) {
             btnLoginRegistrar.setOnClickListener{
-                var intent = Intent(this@LoginActivity, RegistrarActivity::class.java)
+                val intent = Intent(this@LoginActivity, RegistrarActivity::class.java)
+                startActivity(intent)
+            }
+
+            btnLoginLogin.setOnClickListener {
+                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                 startActivity(intent)
             }
         }
