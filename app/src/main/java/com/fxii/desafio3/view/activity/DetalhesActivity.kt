@@ -1,5 +1,6 @@
 package com.fxii.desafio3.view.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.fxii.desafio3.R
 import com.fxii.desafio3.databinding.ActivityDetalhesBinding
 import com.fxii.desafio3.model.Comic
+import com.fxii.desafio3.model.Image
 
 class DetalhesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesBinding
@@ -22,9 +24,23 @@ class DetalhesActivity : AppCompatActivity() {
 
         setupComic()
 
-        binding.btnDetalhesVoltar.setOnClickListener {
-            finish()
+        setupObservables()
+    }
+
+    private fun setupObservables() {
+        with(binding) {
+            btnDetalhesVoltar.setOnClickListener {
+                finish()
+            }
+
+            flDetalhesCapa.setOnClickListener {
+                val intent = Intent(this@DetalhesActivity, CapaActivity::class.java)
+                intent.putExtra(DetalhesActivity.KEY_INTENT_CAPA, comic?.thumbnail)
+                startActivity(intent)
+            }
         }
+
+
     }
 
     private fun setupComic() {
@@ -34,11 +50,12 @@ class DetalhesActivity : AppCompatActivity() {
             if(desc.isNullOrBlank()) desc = "No description"
 
             val price = "$ %.2f".format(comic.prices[0].price)
-            val date = comic.dates[0].date
+            val date = comic.dates[0].getFormattedDate()
             val issue = comic.issueNumber.toString()
             val title = comic.title
-            val image = if(comic.images.count()>0) "${comic.images.last().path}/landscape_amazing.${comic.images.last().extension}" else null
-            val thumbnail = "${comic.thumbnail.path}/portrait_medium.${comic.thumbnail.extension}"
+            //val image = if(comic.images.count()>0) "${comic.images.last().path}/landscape_amazing.${comic.images.last().extension}" else null
+            val image = if(comic.images.count()>0) comic.images.last().getFullPath(Image.LANDSCAPE_AMAZING) else null
+            val thumbnail = comic.thumbnail.getFullPath(Image.PORTRAIT_MEDIUM) //"${comic.thumbnail.path}/portrait_medium.${comic.thumbnail.extension}"
             val pages = comic.pageCount.toString()
 
             with(binding) {
@@ -56,5 +73,9 @@ class DetalhesActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    companion object {
+        const val KEY_INTENT_CAPA = "capa"
     }
 }

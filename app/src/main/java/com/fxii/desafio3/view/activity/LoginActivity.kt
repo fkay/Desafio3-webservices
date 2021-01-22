@@ -3,7 +3,10 @@ package com.fxii.desafio3.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.fxii.desafio3.R
 import com.fxii.desafio3.databinding.ActivityLoginBinding
+import com.fxii.desafio3.extensions.validateTextInputLayout
+import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -24,8 +27,13 @@ class LoginActivity : AppCompatActivity() {
             }
 
             btnLoginLogin.setOnClickListener {
-                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-                startActivity(intent)
+                val checkResult = tfLoginEmail.validateTextInputLayout(R.string.emaill)
+                        .and(tfLoginSenha.validateTextInputLayout(R.string.senha))
+
+                if(checkResult) {
+                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
     }

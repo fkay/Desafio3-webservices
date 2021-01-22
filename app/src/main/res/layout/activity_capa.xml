@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_close_36"
-        android:background="?android:selectableItemBackground"
+        android:background="@drawable/round_ripple"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         />

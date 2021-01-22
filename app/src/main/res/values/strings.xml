@@ -22,4 +22,6 @@
     <string name="price">Price:</string>
     <string name="published">Published:</string>
     <string name="pages">Pages:</string>
+
+    <string name="campo_obrigatorio">Field %1$s required</string>
 </resources>

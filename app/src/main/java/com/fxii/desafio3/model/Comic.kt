@@ -28,7 +28,7 @@ data class Comic(
     //val series: Series,
     //val stories: Stories,
     //val textObjects: List<TextObject>,
-    val thumbnail: Thumbnail,
+    val thumbnail: Image,
     val title: String,
     //val upc: String,
     val urls: List<Url>,
